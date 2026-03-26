@@ -1,0 +1,22 @@
+{
+  "name": "sakura-sushi",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --dist-dir dist"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead",
+    "ie 11"
+  ],
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.4",
+    "parcel": "^2.0.0",
+    "sass": "^1.69.0"
+  },
+  "dependencies": {
+    "aos": "^2.3.4"
+  }
+}

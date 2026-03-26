@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakura Sushi</title>
+  <link rel="icon" type="image/png" href="./assets/images/logo.png" />
+  <link rel="stylesheet" href="./styles/main.scss">
+</head>
+
+<body>
+<a href="#main" class="skip-link">Saltar navegación</a>
+
+<header>
+  <h1>Sakura Sushi</h1>
+
+  <!-- Botón hamburguesa -->
+  <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+  <!-- Nav menu-->
+  <nav class="nav">
+    <a href="index.html">Inicio</a>
+    <a href="categoria.html">Carta</a>
+    <a href="links.html">Enlaces</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Auténtica cocina japonesa</h1>
+</section>
+
+<main id="main" class="container">
+
+  <section>
+    <h2>Bienvenido</h2>
+    <p>Disfruta de la mejor gastronomía japonesa en un ambiente único.</p>
+    <button id="alertBtn">Reservar</button>
+  </section>
+
+  <section class="grid">
+
+    <div class="card" data-aos="fade-up">
+      <img src="./assets/images/sushi.jpg" alt="Sushi variado">
+      <h3>Sushi</h3>
+      <p>Frescura y tradición japonesa.</p>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <img src="./assets/images/ramen.jpg" alt="Ramen japonés">
+      <h3>Ramen</h3>
+      <p>Caldo intenso y delicioso.</p>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <img src="./assets/images/tempura1.jpg" alt="Tempura japonés">
+      <h3>Tempura</h3>
+      <p>Tempura intenso y delicioso.</p>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <img src="./assets/images/bebida1.jpg" alt="Bebida japonés">
+      <h3>Bebidas</h3>
+      <p>Bebidas variadas.</p>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <img src="./assets/images/postre1.jpg" alt="Postre japonés">
+      <h3>Postres</h3>
+      <p>Postre intenso y delicioso.</p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="container">
+  <p>&copy; 2026 Sakura Sushi</p>
+</footer>
+
+<script type="module" src="./js/app.js"></script>
+</body>
+</html>
