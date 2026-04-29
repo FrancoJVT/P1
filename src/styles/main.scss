@@ -16,6 +16,8 @@ $text-muted: #ddd;
   color: $text-light;
   border: none;
   cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 6%;
 }
 
 // Reset margen
@@ -53,7 +55,9 @@ body {
 header {
   background: $primary;
   padding: 1rem;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
 }
 
 .nav {
@@ -63,6 +67,7 @@ header {
   a {
     color: $text-light;
     text-decoration: none;
+    font-size: 2rem;
   }
 
   &.active {
@@ -105,15 +110,127 @@ ul {
 
   &.grid {
     display: grid;
-    gap: 15px;
-    justify-items: center;
+    gap: 150px;
+    justify-content: center;
 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Mobile: 1 columna */
+    grid-template-columns: 1fr;
 
+    /* Tablet y desktop: 2 columnas */
     @media (min-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(280px, 400px));
     }
   }
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-link:hover .card {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+.card {
+  background: #1a1a1a;
+  border-radius: 80px;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  
+
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    
+  }
+
+  h3 {
+    margin: 10px 0 5px 0;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  a {
+    @include button-style;
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+}
+
+/* Centramos la última card si queda sola */
+@media (min-width: 768px) {
+  .grid .card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 400px;
+  }
+}
+
+
+.hero-svg {
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/*------------- CLIP-PATH -------------*/
+.clip-path {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.clip-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.clip-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+
+  clip-path: polygon(
+    0% 10%,
+    10% 0%,
+    90% 0%,
+    100% 10%,
+    100% 90%,
+    90% 100%,
+    10% 100%,
+    0% 90%
+  );
+
+  transition: transform 0.4s ease, clip-path 0.4s ease;
+}
+
+.clip-image:hover {
+  transform: scale(1.05);
+  clip-path: polygon(
+    5% 5%,
+    15% 0%,
+    85% 0%,
+    95% 5%,
+    85% 85%,
+    85% 85%,
+    15% 85%,
+    0% 85%
+  );
 }
 
 // CARD
@@ -293,13 +410,13 @@ button {
     flex-direction: column;
     background: $primary;
     position: absolute;
-    top: 60px;
+    top: 80px;
     width: 100%;
     left: 0;
     text-align: center;
 
     a {
-      padding: 1rem;
+      padding: -1rem;
       border-top: 1px solid rgba(255,255,255,0.2);
     }
   }

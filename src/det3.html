@@ -7,12 +7,16 @@
   <link rel="icon" type="image/png" href="./assets/images/logo.png" />
   <link rel="stylesheet" href="./styles/main.scss">
 </head>
+
 <body>
+
 <a href="#main" class="skip-link">Saltar navegación</a>
 
 <header>
   <h1>Tempura</h1>
+
   <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
   <nav class="nav">
     <a href="index.html">Inicio</a>
     <a href="categoria.html">Carta</a>
@@ -22,57 +26,128 @@
 
 <main id="main" class="container">
 
-  <!-- Imagen destacada -->
-  <section class="card3" data-aos="fade-up">
-    <img src="./assets/images/tempura1.jpg" alt="Tempura variada">
+  <!-- IMAGEN DESTACADA -->
+  <section class="card3">
+
+    <picture>
+      <!-- móvil -->
+      <source 
+        media="(max-width: 768px)"
+        srcset="./assets/images/optimized/tempura1-400.avif"
+        type="image/avif">
+
+      <source 
+        media="(max-width: 768px)"
+        srcset="./assets/images/optimized/tempura1-400.webp"
+        type="image/webp">
+
+      <!-- desktop -->
+      <source 
+        media="(min-width: 769px)"
+        srcset="./assets/images/optimized/tempura1-800.avif"
+        type="image/avif">
+
+      <source 
+        media="(min-width: 769px)"
+        srcset="./assets/images/optimized/tempura1-800.webp"
+        type="image/webp">
+
+      <!-- fallback -->
+      <img 
+        src="./assets/images/optimized/tempura1-800.jpeg"
+        alt="Sushi variado presentación deluxe">
+    </picture>
+
+
     <h3>Tempura Variada</h3>
     <p>Crujiente y deliciosa, fritura japonesa tradicional.</p>
   </section>
 
-  <!-- Descripción -->
+  <!-- DESCRIPCIÓN -->
   <section>
     <h2>Descripción</h2>
     <p>La tempura es un plato japonés consistente en mariscos y verduras rebozados y fritos.</p>
-    <p>Se sirve acompañado de salsa tentsuyu y se caracteriza por su textura ligera y crujiente.</p>
+    <p>Se sirve con salsa tentsuyu y destaca por su textura ligera y crujiente.</p>
   </section>
 
-  <!-- Galería -->
+  <!-- GALERÍA -->
   <section>
     <h2>Galería</h2>
+
     <div class="gallery">
+
       <div class="gallery-item">
-        <img src="./assets/images/tempura1.jpg" alt="Tempura de camarón" data-title="Tempura de Camarón">
+        <img
+          src="./assets/images/optimized/tempura1-400.jpeg"
+          srcset="
+            ./assets/images/optimized/tempura1-400.jpeg 400w,
+            ./assets/images/optimized/tempura1-800.jpeg 800w,
+            ./assets/images/optimized/tempura1-1200.jpeg 1200w"
+          sizes="(max-width: 768px) 80vw, 250px"
+          alt="Tempura de camarón"
+          data-title="Tempura de Camarón">
+
         <p class="caption">Tempura de Camarón</p>
       </div>
+
       <div class="gallery-item">
-        <img src="./assets/images/tempura2.jpg" alt="Tempura de verduras" data-title="Tempura de Verduras">
+        <img
+          src="./assets/images/optimized/tempura2-400.jpeg"
+          srcset="
+            ./assets/images/optimized/tempura2-400.jpeg 400w,
+            ./assets/images/optimized/tempura2-800.jpeg 800w,
+            ./assets/images/optimized/tempura2-1200.jpeg 1200w"
+          sizes="(max-width: 768px) 80vw, 250px"
+          alt="Tempura de verduras"
+          data-title="Tempura de Verduras">
+
         <p class="caption">Tempura de Verduras</p>
       </div>
+
       <div class="gallery-item">
-        <img src="./assets/images/tempura3.jpg" alt="Tempura mixta" data-title="Tempura Mixta">
+        <img
+          src="./assets/images/optimized/tempura3-400.jpeg"
+          srcset="
+            ./assets/images/optimized/tempura3-400.jpeg 400w,
+            ./assets/images/optimized/tempura3-800.jpeg 800w,
+            ./assets/images/optimized/tempura3-1200.jpeg 1200w"
+          sizes="(max-width: 768px) 80vw, 250px"
+          alt="Tempura mixta"
+          data-title="Tempura Mixta">
+
         <p class="caption">Tempura Mixta</p>
       </div>
+
     </div>
 
     <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-      <span class="close">&times;</span>
-      <span class="prev">&#10094;</span>
+    <div class="lightbox" id="lightbox" role="dialog" aria-hidden="true">
+      <span class="close" aria-label="Cerrar">&times;</span>
+      <span class="prev" aria-label="Anterior">&#10094;</span>
+
       <div class="lightbox-content">
         <img class="lightbox-img" src="./assets/images/tempura1.jpg" alt="Imagen ampliada">
         <p class="lightbox-title">Nombre del plato</p>
       </div>
-      <span class="next">&#10095;</span>
+
+      <span class="next" aria-label="Siguiente">&#10095;</span>
     </div>
+
   </section>
 
   <!-- Video -->
   <section>
     <h2>Cómo se prepara</h2>
-    <iframe width="100%" height="315" 
+
+    <iframe
+      width="100%"
+      height="315"
       src="https://www.youtube.com/embed/e5ZnN7DeK98"
-      title="Cómo hacer tempura" allowfullscreen>
+      title="Cómo hacer tempura"
+      loading="lazy"
+      allowfullscreen>
     </iframe>
+
   </section>
 
 </main>
@@ -82,5 +157,6 @@
 </footer>
 
 <script type="module" src="./js/app.js"></script>
+
 </body>
 </html>

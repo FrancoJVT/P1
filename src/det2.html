@@ -17,6 +17,7 @@
   <nav class="nav">
     <a href="index.html">Inicio</a>
     <a href="categoria.html">Carta</a>
+    <a href="links.html">Enlaces</a>
   </nav>
 </header>
 
@@ -24,7 +25,35 @@
 
   <!-- Imagen destacada -->
   <section class="card3" data-aos="fade-up">
-    <img src="./assets/images/ramen.jpg" alt="Bol de ramen tonkotsu con cerdo, huevo y fideos">
+    <picture>
+      <!-- móvil -->
+      <source 
+        media="(max-width: 768px)"
+        srcset="./assets/images/optimized/ramen-400.avif"
+        type="image/avif">
+
+      <source 
+        media="(max-width: 768px)"
+        srcset="./assets/images/optimized/ramen-400.webp"
+        type="image/webp">
+
+      <!-- desktop  -->
+      <source 
+        media="(min-width: 769px)"
+        srcset="./assets/images/optimized/ramen-800.avif"
+        type="image/avif">
+
+      <source 
+        media="(min-width: 769px)"
+        srcset="./assets/images/optimized/ramen-800.webp"
+        type="image/webp">
+
+      <!-- fallback -->
+      <img 
+        src="./assets/images/optimized/ramen-800.jpeg"
+        alt="Bol de ramen tonkotsu con cerdo, huevo y fideos">
+    </picture>
+
     <h3>Ramen</h3>
     <p>Frescura y tradición japonesa.</p>
   </section>
@@ -40,40 +69,79 @@
   <!-- Galería con lightbox -->
   <section>
     <h2>Galería</h2>
+
     <div class="gallery">
+
       <div class="gallery-item">
-        <img src="./assets/images/ramen.jpg" alt="Ramen con huevo marinado" data-title="Ramen Clásico">
+        <img 
+          src="./assets/images/optimized/ramen-400.jpeg"
+          srcset="
+            ./assets/images/optimized/ramen-400.jpeg 400w,
+            ./assets/images/optimized/ramen-800.jpeg 800w,
+            ./assets/images/optimized/ramen-1200.jpeg 1200w"
+          sizes="(max-width: 768px) 80vw, 250px"
+          alt="Ramen con huevo marinado"
+          data-title="Ramen Clásico">
+
         <p class="caption">Ramen Clásico</p>
       </div>
+
       <div class="gallery-item">
-        <img src="./assets/images/ramen2.jpg" alt="Preparación de ramen japonés" data-title="Ramen Especial">
+        <img 
+          src="./assets/images/optimized/ramen2-400.jpeg"
+          srcset="
+            ./assets/images/optimized/ramen2-400.jpeg 400w,
+            ./assets/images/optimized/ramen2-800.jpeg 800w,
+            ./assets/images/optimized/ramen2-1200.jpeg 1200w"
+          sizes="(max-width: 768px) 80vw, 250px"
+          alt="Preparación de ramen japonés"
+          data-title="Ramen Especial">
+
         <p class="caption">Ramen Especial</p>
       </div>
+
       <div class="gallery-item">
-        <img src="./assets/images/ramen3.jpg" alt="Detalle de fideos ramen" data-title="Ramen Premium">
+        <img 
+          src="./assets/images/optimized/ramen3-400.jpeg"
+          srcset="
+            ./assets/images/optimized/ramen-400.jpeg 400w,
+            ./assets/images/optimized/ramen-800.jpeg 800w,
+            ./assets/images/optimized/ramen-1200.jpeg 1200w"
+          sizes="(max-width: 768px) 80vw, 250px"
+          alt="Detalle de fideos ramen"
+          data-title="Ramen Premium">
+
         <p class="caption">Ramen Premium</p>
       </div>
+
     </div>
 
     <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-      <span class="close">&times;</span>
-      <span class="prev">&#10094;</span>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+      <span class="close" aria-label="Cerrar">&times;</span>
+      <span class="prev" aria-label="Imagen anterior">&#10094;</span>
 
       <div class="lightbox-content">
         <img class="lightbox-img" src="./assets/images/ramen.jpg" alt="Imagen ampliada">
         <p class="lightbox-title">Nombre del plato</p>
       </div>
 
-      <span class="next">&#10095;</span>
+      <span class="next" aria-label="Imagen siguiente">&#10095;</span>
     </div>
   </section>
 
   <!-- Video YouTube -->
   <section>
     <h2>Cómo se prepara</h2>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/fQFMBPeqMxM"
-      title="Cómo hacer ramen tonkotsu" allowfullscreen></iframe>
+
+    <iframe 
+      width="100%" 
+      height="315"
+      src="https://www.youtube.com/embed/fQFMBPeqMxM"
+      title="Cómo preparar ramen tonkotsu paso a paso"
+      loading="lazy"
+      allowfullscreen>
+    </iframe>
   </section>
 
 </main>

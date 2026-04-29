@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --dist-dir dist"
+    "build": "parcel build src/index.html --dist-dir dist",
+    "images": "node js/images.js"
   },
   "browserslist": [
     "> 0.5%",
@@ -14,7 +15,8 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.16.4",
     "parcel": "^2.0.0",
-    "sass": "^1.69.0"
+    "sass": "^1.69.0",
+    "sharp": "^0.33.5"
   },
   "dependencies": {
     "aos": "^2.3.4"

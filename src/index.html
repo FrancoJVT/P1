@@ -27,6 +27,10 @@
 
 <section class="hero">
   <h1>Auténtica cocina japonesa</h1>
+  <!-- SVG animado -->
+  <svg class="hero-svg" width="120" height="120" viewBox="0 0 100 100" aria-hidden="true">
+    <circle cx="50" cy="50" r="35" fill="#c62828" />
+  </svg>
 </section>
 
 <main id="main" class="container">
@@ -37,37 +41,123 @@
     <button id="alertBtn">Reservar</button>
   </section>
 
-  <section class="grid">
+<!-- CLIP-PATH -->
+<section class="clip-path">
+  <h2>Experiencia visual</h2>
 
-    <div class="card" data-aos="fade-up">
-      <img src="./assets/images/sushi.jpg" alt="Sushi variado">
-      <h3>Sushi</h3>
-      <p>Frescura y tradición japonesa.</p>
+  <div class="clip-card clip-card--wave">
+
+    <picture>
+      <!-- AVIF -->
+      <source
+        srcset="
+          ./assets/images/optimized/sushi-400.avif 400w,
+          ./assets/images/optimized/sushi-800.avif 800w"
+        sizes="(max-width: 768px) 100vw, 50vw"
+        type="image/avif">
+
+      <!-- WebP -->
+      <source
+        srcset="
+          ./assets/images/optimized/sushi-400.webp 400w,
+          ./assets/images/optimized/sushi-800.webp 800w"
+        sizes="(max-width: 768px) 100vw, 50vw"
+        type="image/webp">
+
+      <!-- fallback -->
+      <img
+        src="./assets/images/optimized/sushi-800.jpeg"
+        alt="Sushi con presentación artística"
+        class="clip-image">
+    </picture>
+
+    <div class="clip-text">
+      <h3>Sushi Deluxe</h3>
+      <p>
+        Sushi Deluxe es un concepto de restaurante y servicio a domicilio que ofrece buffet a la carta, permitiendo pedir sushi ilimitado preparado al momento. <br> Se caracteriza por ofrecer variedades modernas, además de presentar sus productos en cajas cuidadas para envío a domicilio.
+      </p>
     </div>
 
-    <div class="card" data-aos="fade-up">
-      <img src="./assets/images/ramen.jpg" alt="Ramen japonés">
-      <h3>Ramen</h3>
-      <p>Caldo intenso y delicioso.</p>
-    </div>
+  </div>
+</section>
 
-    <div class="card" data-aos="fade-up">
-      <img src="./assets/images/tempura1.jpg" alt="Tempura japonés">
-      <h3>Tempura</h3>
-      <p>Tempura intenso y delicioso.</p>
-    </div>
+  <!-- GRID RESPONSIVE -->
+  <section class="container grid">
 
-    <div class="card" data-aos="fade-up">
-      <img src="./assets/images/bebida1.jpg" alt="Bebida japonés">
-      <h3>Bebidas</h3>
-      <p>Bebidas variadas.</p>
-    </div>
+    <!--SUSHI -->
+    <a href="det1.html" class="card-link">
+      <div class="card" data-aos="fade-up">
+        <img 
+          src="./assets/images/optimized/sushi-400.jpeg"
+          srcset="
+            ./assets/images/optimized/sushi-400.jpeg 400w,
+            ./assets/images/optimized/sushi-800.jpeg 800w"
+          sizes="(max-width: 768px) 80vw, 300px"
+          alt="Sushi variado">
+        <h3>Sushi</h3>
+        <p>Frescura y tradición japonesa.</p>
+      </div>
+    </a>
 
-    <div class="card" data-aos="fade-up">
-      <img src="./assets/images/postre1.jpg" alt="Postre japonés">
-      <h3>Postres</h3>
-      <p>Postre intenso y delicioso.</p>
-    </div>
+    <!-- RAMEN -->
+    <a href="det2.html" class="card-link">
+      <div class="card" data-aos="fade-up">
+        <img 
+          src="./assets/images/optimized/ramen-400.jpeg"
+          srcset="
+            ./assets/images/optimized/ramen-400.jpeg 400w,
+            ./assets/images/optimized/ramen-800.jpeg 800w"
+          sizes="(max-width: 768px) 80vw, 300px"
+          alt="Ramen japonés">
+        <h3>Ramen</h3>
+        <p>Caldo intenso y delicioso.</p>
+      </div>
+    </a>
+
+    <!-- TEMPURA -->
+    <a href="det3.html" class="card-link">
+      <div class="card" data-aos="fade-up">
+        <img 
+          src="./assets/images/optimized/tempura1-400.jpeg"
+          srcset="
+            ./assets/images/optimized/tempura1-400.jpeg 400w,
+            ./assets/images/optimized/tempura1-800.jpeg 800w"
+          sizes="(max-width: 768px) 80vw, 300px"
+          alt="Tempura japonés">
+        <h3>Tempura</h3>
+        <p>Crujiente y delicioso.</p>
+      </div>
+    </a>
+
+    <!-- BEBIDAS -->
+    <a href="det4.html" class="card-link">
+      <div class="card" data-aos="fade-up">
+        <img 
+          src="./assets/images/optimized/bebida1-400.jpeg"
+          srcset="
+            ./assets/images/optimized/bebida1-400.jpeg 400w,
+            ./assets/images/optimized/bebida1-800.jpeg 800w"
+          sizes="(max-width: 768px) 80vw, 300px"
+          alt="Bebidas japonesas">
+        <h3>Bebidas</h3>
+        <p>Bebidas variadas.</p>
+      </div>
+    </a>
+
+    <!-- POSTRES -->
+    <a href="det5.html" class="card-link">
+      <div class="card" data-aos="fade-up">
+        <img 
+          src="./assets/images/optimized/postre1-400.jpeg"
+          srcset="
+            ./assets/images/optimized/postre1-400.jpeg 400w,
+            ./assets/images/optimized/postre1-800.jpeg 800w"
+          sizes="(max-width: 768px) 80vw, 300px"
+          alt="Postres japoneses">
+        <h3>Postres</h3>
+        <p>Postre dulce japonés.</p>
+      </div>
+    </a>
 
   </section>
 

@@ -24,7 +24,36 @@
 
   <!-- Imagen destacada -->
   <section class="card3">
-    <img src="./assets/images/sushi.jpg" alt="Sushi variado">
+
+    <picture>
+      <!-- móvil -->
+      <source 
+        media="(max-width: 768px)"
+        srcset="./assets/images/optimized/sushi-400.avif"
+        type="image/avif">
+
+      <source 
+        media="(max-width: 768px)"
+        srcset="./assets/images/optimized/sushi-400.webp"
+        type="image/webp">
+
+      <!-- desktop  -->
+      <source 
+        media="(min-width: 769px)"
+        srcset="./assets/images/optimized/sushi-800.avif"
+        type="image/avif">
+
+      <source 
+        media="(min-width: 769px)"
+        srcset="./assets/images/optimized/sushi-800.webp"
+        type="image/webp">
+
+      <!-- fallback -->
+      <img 
+        src="./assets/images/optimized/sushi-800.jpeg"
+        alt="Sushi variado presentación deluxe">
+    </picture>
+
     <h3>Sushi Deluxe</h3>
     <p>Frescura y tradición japonesa.</p>
   </section>
@@ -40,16 +69,46 @@
   <section>
     <h2>Galería</h2>
     <div class="gallery">
+
+      <!-- SUSHI 1 -->
       <div class="gallery-item">
-        <img src="./assets/images/sushi.jpg" alt="Sushi pieza 1" data-title="Sushi Deluxe">
+        <img 
+          src="./assets/images/optimized/sushi-400.jpeg"
+          srcset="
+            ./assets/images/optimized/sushi-400.jpeg 400w,
+            ./assets/images/optimized/sushi-800.jpeg 800w,
+            ./assets/images/optimized/sushi-1200.jpeg 1200w"
+          sizes="(max-width: 768px) 80vw, 250px"
+          alt="Sushi mixto con salmón y atún"
+          data-title="Sushi Deluxe">
         <p class="caption">Sushi mixto</p>
       </div>
+
+      <!-- SUSHI 2 -->
       <div class="gallery-item">
-        <img src="./assets/images/sushi2.jpg" alt="Sushi pieza 2" data-title="Sushi Especial">
+        <img 
+          src="./assets/images/optimized/sushi2-400.jpeg"
+          srcset="
+            ./assets/images/optimized/sushi2-400.jpeg 400w,
+            ./assets/images/optimized/sushi2-800.jpeg 800w,
+            ./assets/images/optimized/sushi2-1200.jpeg 1200w"
+          sizes="(max-width: 768px) 80vw, 250px"
+          alt="Sushi de gambas"
+          data-title="Sushi Especial">
         <p class="caption">Sushi gambas</p>
       </div>
+
+      <!-- SUSHI 3 -->
       <div class="gallery-item">
-        <img src="./assets/images/sushi3.jpg" alt="Sushi pieza 3" data-title="Sushi Premium">
+        <img 
+          src="./assets/images/optimized/sushi3-400.jpeg"
+          srcset="
+            ./assets/images/optimized/sushi3-400.jpeg 400w,
+            ./assets/images/optimized/sushi3-800.jpeg 800w,
+            ./assets/images/optimized/sushi3-1200.jpeg 1200w"
+          sizes="(max-width: 768px) 80vw, 250px"
+          alt="Sushi premium con presentación elegante"
+          data-title="Sushi Premium">
         <p class="caption">Sushi Premium</p>
       </div>
     </div>
@@ -60,20 +119,28 @@
       <span class="prev">&#10094;</span>
 
       <div class="lightbox-content">
-        <img class="lightbox-img" src="./assets/images/sushi.jpg" alt="Imagen ampliada">
+        <img 
+          class="lightbox-img" 
+          src="./assets/images/optimized/sushi-800.jpeg" 
+          alt="Imagen ampliada">
         <p class="lightbox-title">Nombre del plato</p>
       </div>
 
-      <span class="next">&#10095;</span>
+      <span class="next" aria-label="Imagen siguiente">&#10095;</span>
     </div>
   </section>
 
   <!-- Video de preparación -->
   <section>
     <h2>Cómo se prepara</h2>
-    <iframe width="100%" height="315" 
+
+    <iframe 
+      width="100%" 
+      height="315"
       src="https://www.youtube.com/embed/I1UDS2kgqY8"
-      title="Cómo hacer sushi" allowfullscreen>
+      title="Cómo preparar sushi paso a paso"
+      loading="lazy"
+      allowfullscreen>
     </iframe>
   </section>
 
